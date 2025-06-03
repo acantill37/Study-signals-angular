@@ -8,6 +8,10 @@ export interface Card {
     id: string,
     name: string,
     type: string
+    race?:string
+    card_images: {
+      image_url_small: string;
+    }[];
 }
 
 interface CardState {

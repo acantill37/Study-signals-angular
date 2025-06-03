@@ -15,7 +15,7 @@ export class CardsService {
    loadCards(page = 0) {
     return this.http
       .get<{ data: Card[] }>(
-        `https://db.ygoprodeck.com/api/v7/cardinfo.php?num=5&offset=${page * 5}`
+        `https://db.ygoprodeck.com/api/v7/cardinfo.php?num=7&offset=${page * 5}`
       )
       .pipe(map((response) => response.data));
   }

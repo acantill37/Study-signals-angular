@@ -1,20 +1,300 @@
-<table>
-    <tr>
-      <th>Card Name</th>
-      <th>Card Type</th>
-    </tr>
-    @for (card of store.cards(); track $index){
-      <tr>
-        <td>{{card.name}}</td>
-        <td>{{card.type}}</td>
-      </tr>
-    }
-</table>
+<!-- Features -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <div class="aspect-w-16 aspect-h-7">
+      <div class="flex flex-col">
+    <div class="-m-1.5 overflow-x-auto">
+      <div class="p-1.5 min-w-full inline-block align-middle">
+        <div class="bg-white border border-gray-200 rounded-xl shadow-2xs overflow-hidden dark:bg-neutral-900 dark:border-neutral-700">
+          <!-- Header -->
+          <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-neutral-700">
+            <div>
+              <h2 class="text-xl font-semibold text-gray-800 dark:text-neutral-200">
+                Nombres de las cartas de Jgo
+              </h2>
+              <div class="flex gap-2">
+              <p class="flex items-center text-sm text-gray-600 dark:text-neutral-400">
+                 Este es un proyecto para practicar angular rxjs
+              </p>
+              <div class="hidden md:block">
+               <div class="relative">
+                 <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3.5">
+                   <svg class="shrink-0 size-4 text-gray-400 dark:text-white/60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                 </div>
+                 <input type="text" class="py-2 ps-10 pe-16 block w-full bg-transparent border border-gray-300 rounded-lg text-sm focus:outline-hidden focus:border-gray-400 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-400 dark:placeholder:text-neutral-400 dark:focus:border-neutral-600" placeholder="Search"  (input)="onSearchInput($event)">
+                 <div class="hidden absolute inset-y-0 end-0 flex items-center pointer-events-none z-20 pe-1">
+                   <button type="button" class="inline-flex shrink-0 justify-center items-center size-6 rounded-full text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 dark:text-neutral-500 dark:hover:text-blue-500 dark:focus:text-blue-500" aria-label="Close">
+                     <span class="sr-only">Close</span>
+                     <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+                   </button>
+                 </div>
+                 <div class="absolute inset-y-0 end-0 flex items-center pointer-events-none z-20 pe-3 text-gray-400">
+                   <svg class="shrink-0 size-3 text-gray-400 dark:text-white/60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"/></svg>
+                   <span class="mx-1">
+                     <svg class="shrink-0 size-3 text-gray-400 dark:text-white/60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                   </span>
+                   <span class="text-xs">/</span>
+                 </div>
+                </div>
+                </div>
+                </div>
+            </div>
 
-Current page => {{page()}}
+            <div>
+              <div class="inline-flex gap-x-2">
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                  View all
+                </a>
 
-<button (click)="nextPagee()" >Update SpellCard</button>
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                  <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                  Create
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- End Header -->
 
-<pre><code>
-  Quantity of Spell Cards : {{store.spellCards()}}
-</code></pre>
+          <!-- Table -->
+          <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
+            <thead class="bg-gray-50 dark:bg-neutral-900">
+              <tr>
+                <th scope="col" class="ps-6 py-3 text-start">
+                  <label for="hs-at-with-checkboxes-main" class="flex">
+                    <input type="checkbox" class="shrink-0 border-gray-300 rounded-sm text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-main">
+                    <span class="sr-only">Checkbox</span>
+                  </label>
+                </th>
+
+                <th scope="col" class="px-6 py-3 text-start">
+                  <div class="flex items-center gap-x-2">
+                    <span class="text-xs font-semibold uppercase text-gray-800 dark:text-neutral-200">
+                      Name
+                    </span>
+                  </div>
+                </th>
+
+                <th scope="col" class="px-6 py-3 text-start">
+                  <div class="flex items-center gap-x-2">
+                    <span class="text-xs font-semibold uppercase text-gray-800 dark:text-neutral-200">
+                      Tipo de carta hechizo
+                    </span>
+                  </div>
+                </th>
+
+                <th scope="col" class="px-6 py-3 text-end"></th>
+              </tr>
+            </thead>
+
+            <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
+             @for (card of getDisplayedCards(); track $index) {
+               <tr>
+                 <td class="size-px whitespace-nowrap">
+                   <div class="ps-6 py-3">
+                     <label for="hs-at-with-checkboxes-{{$index+1}}" class="flex">
+                       <input type="checkbox" class="shrink-0 border-gray-300 rounded-sm text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-{{$index+1}}">
+                       <span class="sr-only">Checkbox</span>
+                     </label>
+                   </div>
+                 </td>
+                 <td class="size-px whitespace-nowrap">
+                   <div class="px-6 py-3">
+                     <span class="text-sm text-gray-600 dark:text-neutral-400">{{card.name}}</span>
+                   </div>
+                 </td>
+                 <td class="size-px whitespace-nowrap">
+                   <div class="px-6 py-3">
+                     <div class="flex items-center gap-x-2">
+                       <div class="grow">
+                         <span class="text-sm text-gray-600 dark:text-neutral-400">{{card.type}}</span>
+                       </div>
+                     </div>
+                   </div>
+                 </td>
+                 <td class="size-px whitespace-nowrap">
+                  <div class="px-6 py-3">
+                    @if (card.card_images && card.card_images[0].image_url_small) {
+                        <img 
+                          [src]="card.card_images[0].image_url_small" 
+                          [alt]="card.name" 
+                          (click)="openModal(card.card_images[0].image_url_small)"  
+                          class="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+                        >
+                      } @else {
+                        <div class="h-10 w-10 bg-gray-200 flex items-center justify-center">
+                          <span class="text-xs text-gray-500">No image</span>
+                        </div>
+                      }
+                    </div>
+                </td>
+               </tr>
+             }
+          </tbody>
+          </table>
+          <!-- End Table -->
+
+          <!-- Footer -->
+          <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 dark:border-neutral-700">
+            <div>
+              <p class="text-sm text-gray-600 dark:text-neutral-400">
+                <span class="font-semibold text-gray-800 dark:text-neutral-200">{{page()}}</span> pagina
+              </p>
+            </div>
+
+            <div>
+              <div class="inline-flex gap-x-2">
+                <button (click)="previousPage()"  type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                  <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                  Prev
+                </button>
+
+                <button (click)="nextPage()" type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                  Next
+                  <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- End Footer -->
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Grid -->
+  <div class="mt-5 lg:mt-16 grid lg:grid-cols-3 gap-8 lg:gap-12">
+    <div class="lg:col-span-1">
+           <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+      <div class="h-30 flex flex-col justify-center items-center bg-blue-600 rounded-t-xl">
+        <svg class="size-28" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="56" height="56" rx="10" fill="white"/>
+          <path d="M20.2819 26.7478C20.1304 26.5495 19.9068 26.4194 19.6599 26.386C19.4131 26.3527 19.1631 26.4188 18.9647 26.5698C18.848 26.6622 18.7538 26.78 18.6894 26.9144L10.6019 43.1439C10.4874 43.3739 10.4686 43.6401 10.5496 43.884C10.6307 44.1279 10.805 44.3295 11.0342 44.4446C11.1681 44.5126 11.3163 44.5478 11.4664 44.5473H22.7343C22.9148 44.5519 23.0927 44.5037 23.2462 44.4084C23.3998 44.3132 23.5223 44.1751 23.5988 44.011C26.0307 38.9724 24.5566 31.3118 20.2819 26.7478Z" fill="url(#paint0_linear_2204_541)"/>
+          <path d="M28.2171 11.9791C26.201 15.0912 25.026 18.6755 24.8074 22.3805C24.5889 26.0854 25.3342 29.7837 26.9704 33.1126L32.403 44.0113C32.4833 44.1724 32.6067 44.3079 32.7593 44.4026C32.912 44.4973 33.088 44.5475 33.2675 44.5476H44.5331C44.6602 44.5479 44.7861 44.523 44.9035 44.4743C45.0209 44.4257 45.1276 44.3543 45.2175 44.2642C45.3073 44.1741 45.3785 44.067 45.427 43.9492C45.4755 43.8314 45.5003 43.7052 45.5 43.5777C45.5001 43.4274 45.4659 43.2791 45.3999 43.1441L29.8619 11.9746C29.7881 11.8184 29.6717 11.6864 29.5261 11.594C29.3805 11.5016 29.2118 11.4525 29.0395 11.4525C28.8672 11.4525 28.6984 11.5016 28.5529 11.594C28.4073 11.6864 28.2908 11.8184 28.2171 11.9746V11.9791Z" fill="#2684FF"/>
+          <defs>
+          <linearGradient id="paint0_linear_2204_541" x1="24.734" y1="29.2284" x2="16.1543" y2="44.0429" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#0052CC"/>
+          <stop offset="0.92" stop-color="#2684FF"/>
+          </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="p-4 md:p-6">
+        <span class="block mb-1 text-xs font-semibold uppercase text-blue-600 dark:text-blue-500">
+          Atlassian API
+        </span>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-neutral-300 dark:hover:text-white">
+          Atlassian
+        </h3>
+        <p class="mt-3 text-gray-500 dark:text-neutral-500">
+          A software that develops products for software developers and developments.
+        </p>
+      </div>
+      <div class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700">
+        <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+          View sample
+        </a>
+        <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+          View API
+        </a>
+      </div>
+    </div>
+    </div>
+    <!-- End Col -->
+
+    <div class="lg:col-span-2">
+      <div class="grid sm:grid-cols-2 gap-8 md:gap-12">
+        <!-- Icon Block -->
+        <div class="flex gap-x-5">
+          <svg class="shrink-0 mt-1 size-6 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="10" x="3" y="11" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" x2="8" y1="16" y2="16"/><line x1="16" x2="16" y1="16" y2="16"/></svg>
+          <div class="grow">
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+              Creative minds
+            </h3>
+            <p class="mt-1 text-gray-600 dark:text-neutral-400">
+              We choose our teams carefully. Our people are the secret to great work.
+            </p>
+          </div>
+        </div>
+        <!-- End Icon Block -->
+
+        <!-- Icon Block -->
+        <div class="flex gap-x-5">
+          <svg class="shrink-0 mt-1 size-6 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+          <div class="grow">
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+              Simple and affordable
+            </h3>
+            <p class="mt-1 text-gray-600 dark:text-neutral-400">
+              From boarding passes to movie tickets, there's pretty much nothing you can't store with Preline.
+            </p>
+          </div>
+        </div>
+        <!-- End Icon Block -->
+
+        <!-- Icon Block -->
+        <div class="flex gap-x-5">
+          <svg class="shrink-0 mt-1 size-6 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <div class="grow">
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+              Industry-leading documentation
+            </h3>
+            <p class="mt-1 text-gray-600 dark:text-neutral-400">
+              Our documentation and extensive Client libraries contain everything a business needs to build a custom integration.
+            </p>
+          </div>
+        </div>
+
+         <div class="flex gap-x-5">
+          <svg class="shrink-0 mt-1 size-6 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+          <div class="grow">
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+              Simple and affordable
+            </h3>
+            <p class="mt-1 text-gray-600 dark:text-neutral-400">
+              From boarding passes to movie tickets, there's pretty much nothing you can't store with Preline.
+            </p>
+          </div>
+        </div>
+        <!-- End Icon Block -->
+
+        <!-- Icon Block -->
+        <div class="flex gap-x-5">
+          <svg class="shrink-0 mt-1 size-6 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div class="grow">
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+              Designing for people
+            </h3>
+            <p class="mt-1 text-gray-600 dark:text-neutral-400">
+              We actively pursue the right balance between functionality and aesthetics, creating delightful experiences.
+            </p>
+          </div>
+        </div>
+        <!-- End Icon Block -->
+      </div>
+    </div>
+    <!-- End Col -->
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Features -->
+
+@if (selectedImage()) {
+  <div 
+    class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+    (click)="closeModal()"
+  >
+    <div class="relative max-w-4xl" (click)="$event.stopPropagation()">
+      <img 
+        [src]="selectedImage()" 
+        alt="Zoomed card" 
+        class="max-w-full max-h-[90vh] object-contain"
+      >
+      <button 
+        class="absolute -top-4 -right-4 bg-red-500 text-white rounded-full p-2 hover:bg-red-600"
+        (click)="closeModal()"
+      >
+        ✕
+      </button>
+    </div>
+  </div>
+}
