@@ -1,11 +1,11 @@
 import { Component, effect, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { Card, CardStore } from '../../store/cars.store';
-import { CardsService } from '../../services/cards.service';
+import { HeaderComponent } from '../../header/header.component';
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.scss']
 })
