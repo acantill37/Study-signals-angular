@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { CardsComponent } from './components/cards/cards.component';
 import { RouterModule } from '@angular/router';
 
 @Component({
