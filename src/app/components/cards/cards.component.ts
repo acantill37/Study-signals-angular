@@ -1,11 +1,28 @@
 import { Component, effect, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { Card, CardStore } from '../../store/cars.store';
 import { HeaderComponent } from '../../header/header.component';
+import confetti from 'canvas-confetti';
+import { CommonModule } from '@angular/common';
+import Sortable from 'sortablejs';
 
+ window.addEventListener('load', () => {
+    (function () {
+      const sortableLeft = document.querySelector("#hs-shared-left-sortable");
+      const sortableRight = document.querySelector("#hs-shared-right-sortable");
+      const options = {
+        group: 'shared',
+        animation: 150,
+        dragClass: 'rounded-none!'
+      };
+
+      new Sortable(sortableLeft, options);
+      new Sortable(sortableRight, options);
+    })();
+  });
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, CommonModule],
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.scss']
 })
@@ -16,6 +33,10 @@ export class CardsComponent implements OnInit {
   currentSearch = signal('');
   currentFilter: WritableSignal<'name' | 'type' | 'race'> = signal('name');
   showFilteredResults = signal(false);
+
+  draggedItemId: number | null = null;
+  dropPosition: 'above' | 'below' | null = null;
+  hoveredItemId: number | null = null;
 
   constructor() {
     effect(() => {
@@ -64,6 +85,14 @@ export class CardsComponent implements OnInit {
       });
     }
     return this.store.cards();
+  }
+
+   launchConfetti() {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
   }
 
   openModal(imageUrl: string) {

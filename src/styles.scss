@@ -1,1 +1,45 @@
+@use '@angular/material' as mat;
+
 @import "tailwindcss";
+
+@include mat.core();
+
+.dialog-backdrop-class {
+  @apply bg-gray-100/50;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface{
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .mat-mdc-dialog-container .mdc-dialog__surface{
+    border-top-left-radius: 0.5rem !important;
+    border-top-right-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+  }
+}
+
+.mat-mdc-dialog-container {
+  --mdc-dialog-container-shape: 0.5rem;
+  box-shadow: none;
+}
+
+.mat-dialog-container {
+  border-radius: 0.5rem !important;
+  box-shadow: none;
+  background-color: white;
+}
+
+:host ::ng-deep .mat-calendar-body-selected {
+  background-color: #1c3f88;
+  color: var(--mat-datepicker-calendar-date-selected-state-text-color);
+}
+
+.dialog-backdrop-class{
+  @apply bg-gray-100/50 ;
+}
