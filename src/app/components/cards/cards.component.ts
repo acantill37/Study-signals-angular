@@ -4,6 +4,7 @@ import { HeaderComponent } from '../../header/header.component';
 import confetti from 'canvas-confetti';
 import { CommonModule } from '@angular/common';
 import Sortable from 'sortablejs';
+import * as XLSX from 'xlsx';
 
  window.addEventListener('load', () => {
     (function () {
@@ -85,6 +86,20 @@ export class CardsComponent implements OnInit {
       });
     }
     return this.store.cards();
+  }
+
+  exportToExcel(): void {
+    const data = this.getDisplayedCards().map(card => ({
+      'Nombre': card.name,
+      'Tipo de carta': card.type,
+      'Raza': card.race || 'N/A',
+    }));
+
+    const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(data);
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Cartas');
+
+    XLSX.writeFile(wb, 'cartas_juego.xlsx');
   }
 
    launchConfetti() {

@@ -24,10 +24,12 @@
     "@tailwindcss/postcss": "^4.1.8",
     "apexcharts": "^4.7.0",
     "canvas-confetti": "^1.9.3",
+    "flowbite": "^3.1.2",
     "preline": "^3.1.0",
     "rxjs": "~7.8.0",
     "sortablejs": "^1.15.6",
     "tslib": "^2.3.0",
+    "xlsx": "^0.18.5",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
