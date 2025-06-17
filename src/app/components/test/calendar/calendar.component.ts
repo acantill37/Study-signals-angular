@@ -33,11 +33,15 @@ export class CalendarComponent implements OnInit {
     this[property]++;
   }
 
-  // ✅ Only allow 'bedrooms' | 'nDays' | 'guest' and prevent going below 0
   decrement(property: 'bedrooms' | 'nDays' | 'guest') {
     if (this[property] > 0) {
       this[property]--;
     }
+  }
+
+  toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    dropdown.classList.toggle('hidden');
   }
 
 }

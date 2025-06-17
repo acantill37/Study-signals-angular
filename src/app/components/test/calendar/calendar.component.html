@@ -12,8 +12,8 @@
         <svg class="hs-collapse-open:block shrink-0 hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         <span class="sr-only">Toggle navigation</span>
       </button>
-      <!-- End Collapse Button -->
     </div>
+    <!-- End Collapse Button -->
 
     <!-- Collapse -->
     <div id="hs-header-base" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block "  aria-labelledby="hs-header-base-collapse" >
@@ -169,7 +169,6 @@
 </header>
 <!-- ========== END HEADER ========== -->
 
-
 <!-- Table Section -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <!-- Card -->
@@ -182,215 +181,188 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-12">
               <!-- Icon Block -->
               <div class="text-center">
-  <div class="relative overflow-hidden p-4 md:[padding:calc(var(--spacing)*5)] bg-white border-[1px] border-gray-200 rounded-xl shadow-xs before:absolute before:top-0 before:end-0 before:size-full 
-    before:bg-linear-to-br before:from-purple-100 before:via-transparent before:blur-xl dark:bg-neutral-800 dark:border-neutral-700
-    dark:before:from-purple-800/30 dark:before:via-transparent">
-    <div class="relative z-10">
-      <div class="flex gap-x-4 justify-between">
-        <span class="mb-4 inline-flex justify-center items-center size-10 bg-white rounded-lg text-gray-700 shadow-xs dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400">
-          <svg class="size-5 text-purple-500 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-          </svg>
-        </span>
-        <div>
-          <div class="relative inline-flex">
-            <button onclick="toggleDropdown()" class="size-7 inline-flex justify-center items-center gap-x-3 radius-lg border border-1 border-transparent text-gray-500 disabled:opacity-50 disabled:pointer-events-none
-              focus:outline-hidden dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-              <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="1"></circle>
-                <circle cx="12" cy="5" r="1"></circle>
-                <circle cx="12" cy="19" r="1"></circle>
-              </svg>
-            </button>
-            <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-lg ring-1 ring-gray-300 dark:bg-neutral-900">
-              <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Share stats</button>
-              <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Hide stats</button>
+                <div class="relative overflow-hidden p-4 md:[padding:calc(var(--spacing)*5)] bg-white border-[1px] border-gray-200 rounded-xl shadow-xs before:absolute before:top-0 before:end-0 before:size-full 
+                  before:bg-linear-to-br before:from-purple-100 before:via-transparent before:blur-xl dark:bg-neutral-800 dark:border-neutral-700
+                  dark:before:from-purple-800/30 dark:before:via-transparent">
+                  <div class="relative z-10">
+                    <div class="flex gap-x-4 justify-between">
+                      <span class="mb-4 inline-flex justify-center items-center size-10 bg-white rounded-lg text-gray-700 shadow-xs dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400">
+                        <svg class="size-5 text-purple-500 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                          <circle cx="9" cy="7" r="4"></circle>
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="relative inline-flex">
+                          <button onclick="toggleDropdown()" class="cursor-pointer size-7 inline-flex justify-center items-center gap-x-3 radius-lg border border-1 border-transparent text-gray-500 disabled:opacity-50 disabled:pointer-events-none
+                            focus:outline-hidden dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="12" cy="5" r="1"></circle>
+                              <circle cx="12" cy="19" r="1"></circle>
+                            </svg>
+                          </button>
+                          <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-lg ring-1 ring-gray-300 dark:bg-neutral-900">
+                            <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Share stats</button>
+                            <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Hide stats</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h2 class="text-base leading-normal flex content-center md:text-base md:leading-normal text-sm text-gray-800 dark:text-neutral-200">Total Users</h2>
+                  <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1">
+                    <h3 class="text-gray-800 text-lg text-2x1 font-semibold dark:text-neutral-200">Hola mundo</h3>
+                    <div class="flex items-center -space-x-2">
+                      <div class="relative group">
+                        <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1679412330254-90cb240038c5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2.5&amp;w=320&amp;h=320&amp;q=80" alt="Avatar">
+                        <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
+                      </div>
+                      <div class="relative group">
+                        <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1659482634023-2c4fda99ac0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80" alt="Avatar">
+                        <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+      
+              <!-- End Icon Block -->
+            
+              <!-- Icon Block -->
+        <div class="text-center">
+          <div class="relative overflow-hidden p-4 md:[padding:calc(var(--spacing)*5)] bg-white border-[1px] border-gray-200 rounded-xl shadow-xs before:absolute before:top-0 before:end-0 before:size-full before:bg-linear-to-br before:from-teal-100 before:via-transparent before:blur-xl dark:bg-neutral-800 dark:border-neutral-700 dark:before:from-teal-800/30 dark:before:via-transparent">
+            <div class="relative z-10">
+              <div class="flex gap-x-4 justify-between">
+                <span class="mb-4 inline-flex justify-center items-center size-10 bg-white rounded-lg text-gray-700 shadow-xs dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400">
+                  <svg class="size-5 text-green-500 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+                </span>
+                <div>
+                  <div class="relative inline-flex">
+                    <button onclick="toggleDropdown()" class="cursor-pointer size-7 inline-flex justify-center items-center gap-x-3 radius-lg border border-1 border-transparent text-gray-500 disabled:opacity-50 disabled:pointer-events-none
+                      focus:outline-hidden dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                      <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <circle cx="12" cy="5" r="1"></circle>
+                        <circle cx="12" cy="19" r="1"></circle>
+                      </svg>
+                    </button>
+                    <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-lg ring-1 ring-gray-300 dark:bg-neutral-900">
+                      <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Share stats</button>
+                      <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Hide stats</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-base leading-normal flex content-center md:text-base md:leading-normal text-sm text-gray-800 dark:text-neutral-200">Total Users</h2>
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1">
+              <h3 class="text-gray-800 text-lg text-2x1 font-semibold dark:text-neutral-200">Hola mundo</h3>
+              <div class="flex items-center -space-x-2">
+                <div class="relative group">
+                  <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1679412330254-90cb240038c5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2.5&amp;w=320&amp;h=320&amp;q=80" alt="Avatar">
+                  <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
+                </div>
+                <div class="relative group">
+                  <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1659482634023-2c4fda99ac0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80" alt="Avatar">
+                  <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <h2 class="text-base leading-normal flex content-center md:text-base md:leading-normal text-sm text-gray-800 dark:text-neutral-200">Total Users</h2>
-    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1">
-      <h3 class="text-gray-800 text-lg text-2x1 font-semibold dark:text-neutral-200">Hola mundo</h3>
-      <div class="flex items-center -space-x-2">
-        <div class="relative group">
-          <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1679412330254-90cb240038c5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2.5&amp;w=320&amp;h=320&amp;q=80" alt="Avatar">
-          <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
-        </div>
-        <div class="relative group">
-          <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1659482634023-2c4fda99ac0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80" alt="Avatar">
-          <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
-        </div>
-      </div>
-    </div>
-  </div>
-                </div>
-
-                <script>
-                  function toggleDropdown() {
-                    const dropdown = document.getElementById('dropdownMenu');
-                    dropdown.classList.toggle('hidden');
-                  }
-                </script>
               <!-- End Icon Block -->
             
               <!-- Icon Block -->
           <div class="text-center">
-  <div class="relative overflow-hidden p-4 md:[padding:calc(var(--spacing)*5)] bg-white border-[1px] border-gray-200 rounded-xl shadow-xs before:absolute before:top-0 before:end-0 before:size-full before:bg-linear-to-br before:from-teal-100 before:via-transparent before:blur-xl dark:bg-neutral-800 dark:border-neutral-700 dark:before:from-teal-800/30 dark:before:via-transparent">
-    <div class="relative z-10">
-      <div class="flex gap-x-4 justify-between">
-        <span class="mb-4 inline-flex justify-center items-center size-10 bg-white rounded-lg text-gray-700 shadow-xs dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400">
-          <svg class="size-5 text-green-500 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
-        </span>
-        <div>
-          <div class="relative inline-flex">
-            <button onclick="toggleDropdown()" class="size-7 inline-flex justify-center items-center gap-x-3 radius-lg border border-1 border-transparent text-gray-500 disabled:opacity-50 disabled:pointer-events-none
-              focus:outline-hidden dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-              <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="1"></circle>
-                <circle cx="12" cy="5" r="1"></circle>
-                <circle cx="12" cy="19" r="1"></circle>
-              </svg>
-            </button>
-            <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-lg ring-1 ring-gray-300 dark:bg-neutral-900">
-              <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Share stats</button>
-              <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Hide stats</button>
-            </div>
+             <div class="relative overflow-hidden p-4 md:[padding:calc(var(--spacing)*5)] bg-white border-[1px] border-gray-200 rounded-xl shadow-xs before:absolute before:top-0 before:end-0 before:size-full before:bg-linear-to-br before:from-blue-100 before:via-transparent before:blur-xl dark:bg-neutral-800 dark:border-neutral-700 dark:before:from-blue-800/30 dark:before:via-transparent">
+               <div class="relative z-10">
+                 <div class="flex gap-x-4 justify-between">
+                   <span class="mb-4 inline-flex justify-center items-center size-10 bg-white rounded-lg text-gray-700 shadow-xs dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400">
+                     <svg class="size-5 text-blue-500 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"></path></svg>
+                   </span>
+                   <div>
+                     <div class="relative inline-flex">
+                       <button onclick="toggleDropdown()" class="cursor-pointer size-7 inline-flex justify-center items-center gap-x-3 radius-lg border border-1 border-transparent text-gray-500 disabled:opacity-50 disabled:pointer-events-none
+                         focus:outline-hidden dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                         <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <circle cx="12" cy="12" r="1"></circle>
+                           <circle cx="12" cy="5" r="1"></circle>
+                           <circle cx="12" cy="19" r="1"></circle>
+                         </svg>
+                       </button>
+                       <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-lg ring-1 ring-gray-300 dark:bg-neutral-900">
+                         <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Share stats</button>
+                         <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Hide stats</button>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <h2 class="text-base leading-normal flex content-center md:text-base md:leading-normal text-sm text-gray-800 dark:text-neutral-200">Total Users</h2>
+               <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1">
+                 <h3 class="text-gray-800 text-lg text-2x1 font-semibold dark:text-neutral-200">Hola mundo</h3>
+                 <div class="flex items-center -space-x-2">
+                   <div class="relative group">
+                     <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1679412330254-90cb240038c5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2.5&amp;w=320&amp;h=320&amp;q=80" alt="Avatar">
+                     <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
+                   </div>
+                   <div class="relative group">
+                     <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1659482634023-2c4fda99ac0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80" alt="Avatar">
+                     <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
+                   </div>
+                 </div>
+               </div>
+             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <h2 class="text-base leading-normal flex content-center md:text-base md:leading-normal text-sm text-gray-800 dark:text-neutral-200">Total Users</h2>
-    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1">
-      <h3 class="text-gray-800 text-lg text-2x1 font-semibold dark:text-neutral-200">Hola mundo</h3>
-      <div class="flex items-center -space-x-2">
-        <div class="relative group">
-          <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1679412330254-90cb240038c5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2.5&amp;w=320&amp;h=320&amp;q=80" alt="Avatar">
-          <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
-        </div>
-        <div class="relative group">
-          <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1659482634023-2c4fda99ac0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80" alt="Avatar">
-          <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  function toggleDropdown() {
-    const dropdown = document.getElementById('dropdownMenu');
-    dropdown.classList.toggle('hidden');
-  }
-</script>
-              <!-- End Icon Block -->
-            
-              <!-- Icon Block -->
-            <div class="text-center">
-  <div class="relative overflow-hidden p-4 md:[padding:calc(var(--spacing)*5)] bg-white border-[1px] border-gray-200 rounded-xl shadow-xs before:absolute before:top-0 before:end-0 before:size-full before:bg-linear-to-br before:from-blue-100 before:via-transparent before:blur-xl dark:bg-neutral-800 dark:border-neutral-700 dark:before:from-blue-800/30 dark:before:via-transparent">
-    <div class="relative z-10">
-      <div class="flex gap-x-4 justify-between">
-        <span class="mb-4 inline-flex justify-center items-center size-10 bg-white rounded-lg text-gray-700 shadow-xs dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400">
-          <svg class="size-5 text-blue-500 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"></path></svg>
-        </span>
-        <div>
-          <div class="relative inline-flex">
-            <button onclick="toggleDropdown()" class="size-7 inline-flex justify-center items-center gap-x-3 radius-lg border border-1 border-transparent text-gray-500 disabled:opacity-50 disabled:pointer-events-none
-              focus:outline-hidden dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-              <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="1"></circle>
-                <circle cx="12" cy="5" r="1"></circle>
-                <circle cx="12" cy="19" r="1"></circle>
-              </svg>
-            </button>
-            <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-lg ring-1 ring-gray-300 dark:bg-neutral-900">
-              <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Share stats</button>
-              <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Hide stats</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h2 class="text-base leading-normal flex content-center md:text-base md:leading-normal text-sm text-gray-800 dark:text-neutral-200">Total Users</h2>
-    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1">
-      <h3 class="text-gray-800 text-lg text-2x1 font-semibold dark:text-neutral-200">Hola mundo</h3>
-      <div class="flex items-center -space-x-2">
-        <div class="relative group">
-          <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1679412330254-90cb240038c5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2.5&amp;w=320&amp;h=320&amp;q=80" alt="Avatar">
-          <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
-        </div>
-        <div class="relative group">
-          <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1659482634023-2c4fda99ac0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80" alt="Avatar">
-          <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  function toggleDropdown() {
-    const dropdown = document.getElementById('dropdownMenu');
-    dropdown.classList.toggle('hidden');
-  }
-</script>
               <!-- End Icon Block -->
             
               <!-- Icon Block -->
               <div class="text-center">
-  <div class="relative overflow-hidden p-4 md:[padding:calc(var(--spacing)*5)] bg-white border-[1px] border-gray-200 rounded-xl shadow-xs before:absolute before:top-0 before:end-0 before:size-full before:bg-linear-to-br before:from-red-100 before:via-transparent before:blur-xl dark:bg-neutral-800 dark:border-neutral-700 dark:before:from-red-800/30 dark:before:via-transparent">
-    <div class="relative z-10">
-      <div class="flex gap-x-4 justify-between">
-        <span class="mb-4 inline-flex justify-center items-center size-10 bg-white rounded-lg text-gray-700 shadow-xs dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400">
-          <svg class="size-5 text-red-500 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
-        </span>
-        <div>
-          <div class="relative inline-flex">
-            <button onclick="toggleDropdown()" class="size-7 inline-flex justify-center items-center gap-x-3 radius-lg border border-1 border-transparent text-gray-500 disabled:opacity-50 disabled:pointer-events-none
-              focus:outline-hidden dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-              <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="1"></circle>
-                <circle cx="12" cy="5" r="1"></circle>
-                <circle cx="12" cy="19" r="1"></circle>
-              </svg>
-            </button>
-            <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-lg ring-1 ring-gray-300 dark:bg-neutral-900">
-              <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Share stats</button>
-              <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Hide stats</button>
+                <div class="relative overflow-hidden p-4 md:[padding:calc(var(--spacing)*5)] bg-white border-[1px] border-gray-200 rounded-xl shadow-xs before:absolute before:top-0 before:end-0 before:size-full before:bg-linear-to-br before:from-red-100 before:via-transparent before:blur-xl dark:bg-neutral-800 dark:border-neutral-700 dark:before:from-red-800/30 dark:before:via-transparent">
+                  <div class="relative z-10">
+                    <div class="flex gap-x-4 justify-between">
+                      <span class="mb-4 inline-flex justify-center items-center size-10 bg-white rounded-lg text-gray-700 shadow-xs dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400">
+                        <svg class="size-5 text-red-500 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+                      </span>
+                      <div>
+                        <div class="relative inline-flex">
+                          <button onclick="toggleDropdown()" class="cursor-pointer size-7 inline-flex justify-center items-center gap-x-3 radius-lg border border-1 border-transparent text-gray-500 disabled:opacity-50 disabled:pointer-events-none
+                            focus:outline-hidden dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="12" cy="12" r="1"></circle>
+                              <circle cx="12" cy="5" r="1"></circle>
+                              <circle cx="12" cy="19" r="1"></circle>
+                            </svg>
+                          </button>
+                          <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-lg ring-1 ring-gray-300 dark:bg-neutral-900">
+                            <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Share stats</button>
+                            <button class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800">Hide stats</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h2 class="text-base leading-normal flex content-center md:text-base md:leading-normal text-sm text-gray-800 dark:text-neutral-200">Total Users</h2>
+                  <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1">
+                    <h3 class="text-gray-800 text-lg text-2x1 font-semibold dark:text-neutral-200">Hola mundo</h3>
+                    <div class="flex items-center -space-x-2">
+                      <div class="relative group">
+                        <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1679412330254-90cb240038c5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2.5&amp;w=320&amp;h=320&amp;q=80" alt="Avatar">
+                        <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
+                      </div>
+                      <div class="relative group">
+                        <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1659482634023-2c4fda99ac0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80" alt="Avatar">
+                        <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
+                      </div>
+                    </div>
+                  </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <h2 class="text-base leading-normal flex content-center md:text-base md:leading-normal text-sm text-gray-800 dark:text-neutral-200">Total Users</h2>
-    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1">
-      <h3 class="text-gray-800 text-lg text-2x1 font-semibold dark:text-neutral-200">Hola mundo</h3>
-      <div class="flex items-center -space-x-2">
-        <div class="relative group">
-          <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1679412330254-90cb240038c5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2.5&amp;w=320&amp;h=320&amp;q=80" alt="Avatar">
-          <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
-        </div>
-        <div class="relative group">
-          <img class="shrink-0 size-7 border-[2px] rounded-full dark:border-neutral-800" src="https://images.unsplash.com/photo-1659482634023-2c4fda99ac0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80" alt="Avatar">
-          <span class="absolute hidden group-hover:block bg-gray-900 text-xs text-white rounded-lg py-1 px-2 whitespace-nowrap dark:bg-neutral-700">Lewis Clarke</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  function toggleDropdown() {
-    const dropdown = document.getElementById('dropdownMenu');
-    dropdown.classList.toggle('hidden');
-  }
-</script>
               <!-- End Icon Block -->
-            </div>
+        </div>
           </div>
           <!-- End Icon Blocks -->
           <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
